@@ -240,6 +240,8 @@ MonoBehaviour:
   projectileMesh: {fileID: 7375337548765109680}
   inFlightAudioSource: {fileID: 136168842684345051}
   disableOnHit: {fileID: 4361980691020798282}
+  launcher: {fileID: 4490302565791019165, guid: f26add0b8561051438426890f3bd0f19, type: 3}
+  maxDistance: 100
 --- !u!54 &91128310120046435
 Rigidbody:
   m_ObjectHideFlags: 0

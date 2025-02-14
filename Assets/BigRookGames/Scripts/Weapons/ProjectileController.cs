@@ -25,6 +25,8 @@ namespace BigRookGames.Weapons
         // --- VFX ---
         public ParticleSystem disableOnHit;
 
+        public GameObject launcher;
+        public int maxDistance = 100;
 
         private void Update()
         {
@@ -33,6 +35,12 @@ namespace BigRookGames.Weapons
 
             // --- moves the game object in the forward direction at the defined speed ---
             transform.position += transform.forward * (speed * Time.deltaTime);
+
+            // if it goes past max distance destroy the gameobject
+            if(Vector3.Distance(transform.position, launcher.transform.position) > maxDistance)
+            {
+                Destroy(gameObject);
+            }
         }
 
 
