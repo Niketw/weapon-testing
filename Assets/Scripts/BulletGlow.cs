@@ -10,13 +10,14 @@ public class BulletGlow : MonoBehaviour {
     public float range = 3f;
 
     void Start() {
+        Debug.Log("hello world");
         // Check if a Light component is already attached
         Light bulletLight = GetComponent<Light>();
         if (bulletLight == null) {
             // Add a Light component if not present
             bulletLight = gameObject.AddComponent<Light>();
         }
-
+        
         // Configure the light's properties
         bulletLight.color = glowColor;
         bulletLight.intensity = intensity;
